@@ -66,7 +66,9 @@ Dependencies:
 Game Code & Assets:
   All code, assets, sprites and images were created by me.
   No code or art was taken from any other people.
-  No AI was used in the creation of any code or art.
-    AI was limited in use to explaining topics and ideas that i was implimenting
-    This means it generated examples of code, with no relevance to this project
-    I then looked at this AI generated code to understand the concepts but did not use any of it. 
+  No AI was used in the creation of any art.
+  AI was limited in use to:
+    Explaining topics and ideas that i was implimenting
+    Generating code examples, with no relevance to this project to be used for concepts understamding
+    Generating code example snippets to be reviewed by me, go through 2 test projects before getting implimneted into the main file.
+    All AI generated code that i used was made sure that it generated sources for ideas it made (eg: stack overflow)
