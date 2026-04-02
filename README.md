@@ -6,14 +6,18 @@ Currently on Beta 1.0
 
 Game Overview:
 Story Background:
-In the distant future, humanity achieved unprecedented unity, forming the Teran Galactic Empire. A sprawling civilization spanning the Milky Way and beyond. 
-Our empire thrived until the sudden arrival of the opposing alien force, a civilization employing tactics so devastating they leveled settlements they attacked so badly that the might have never been teraformed.
-The invasion was absolute: entire star systems were reduced to rubble in mere years. Humanity was pushed back to the Sagittarius Arm, the last defensive line between the invaders and Earth itself.
+In the distant future, humanity achieved unprecedented unity, forming the Teran Galactic Empire. 
+A sprawling civilization spanning the Milky Way and beyond. 
+Our empire thrived until the sudden arrival of the opposing alien force, a civilization employing tactics so devastating they level settlements they attacked so much that they might as well have never been teraformed in the first place.
+The invasion was absolute: entire star systems were reduced to rubble in mere years. 
+Humanity was pushed back to the Sagittarius Arm, the last defensive line between the invaders and Earth itself.
 
 Your Role
 As a conscripted defender, you command a desperate force tasked with holding the Sagittarius Arm. 
-The aliens employ a relentless spearhead/blitzkrieg strategy and overwhelming waves of force. They attack with no care for tactical posisions or crimes against civilians.
-But there's a crucial weakness: if repelled, their forces become dangerously vulnerable. Your mission is to break through this initial assault and turn the tide in humanity's favor.
+The aliens employ a relentless spearhead/blitzkrieg strategy and overwhelming waves of force. 
+They attack with no care for tactical posisions or crimes against civilians.
+But there's a crucial weakness: if repelled, their forces become dangerously vulnerable. 
+Your mission is to break through this initial assault and turn the tide in humanity's favor.
 
 Core Gameplay Mechanics
 The Alien Spearhead System
