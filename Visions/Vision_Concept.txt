@@ -1,0 +1,199 @@
+     :::::::::::::    :::::::::::     ::::::::        ::::::::::: 
+    :+:       :+:   :+:       :+:   :+:      :+:    :+:       :+: 
+   +:+                       +:+          +:+                +:+  
+  +#++:++:++#+        +#++:++:         +#+            +#++:++:    
+           +#+              +#+     +#+                    +#+    
+#+#       #+#   #+#       #+#    #+#           #+#       #+#     
+###########     ###########    #############   ###########       
+
+New ideas on how to implement?:
+	endless mode
+
+Premise:
+	similar to space invaders
+	player is locked into a box where they can move 2D
+	player faces up at all times
+	bullets move 1 per 0.1s
+	missiles move 2 per 0.05s
+	bombs move 1 per 0.25s
+	enemies move n steps left or right:
+		n being 0 to the maximum number of steps before reaching the edge
+		more likely to move to the side with more space (80% on left == 80% chance)
+	
+Attacks:
+	bullets -  1 damage       3 sec           1s delay
+	missiles - 5 damage       1 sec           3s delay
+	bombs -    25 damage      10 sec          30s delay
+
+Player:
+	base       1x bullet      1x missile      1x bomb     15 health    level 4.5
+	armour     1.5x bullet    1.4x missile    1.2x bomb   +80 health   level 6.5
+
+Class:
+	rifle      1.3x bullet    1x missile      1x bomb     15 health    level 5
+	ICBM       1x bullet      1.2x missile    1x bomb     15 health    level 5
+	bomber     1x bullet      1x missile      1.25x bomb  15 health    level 5
+	tank       1x bullet      1x missile      1x bomb     25 health    level 5
+
+Enemies:
+	gold       5x bullet      3x missile      3x bomb     1000 health  level 9
+	white      3x bullet      2x missile      1.8x bomb   200 health   level 8
+	pink       2x bullet      1.75x missile   1.5x bomb   100 health   level 7
+	purple     1.5x bullet    1.4x missile    1.2x bomb   50 health    level 6
+	red        1.25x bullet   1.25x missile   1x bomb     25 health    level 5
+	blue       1x bullet      1x missile                  10 health    level 4
+	yellow     0.75x bullet   0.5x missile                5 health     level 3
+	orange     0.5x bullet                                3 health     level 2
+	black      0.2x bullet                                1 health     level 1
+
+Objective:
+	coin            1, 2, 5, 10, 25, 50, 100, 200, 1000
+	dice            [2-5 nothing] [1 player to 1hp] [6 removes 50% of all enemies total hp] 
+	hammer          puts health back to 100%
+	sands of time   gives player an extra life
+
+Upgrades:
+	damage     +1 bullet      +2 missile      +5 bomb
+	speed      -7% bullet     -5% missile     -10% bomb
+	delay      -5% bullet     -7% missile     -10% bomb
+  	health     +5 health
+
+Level up:
+	damage     +2 bullet      +5 missile      +10 bomb
+	speed      -15% bullet   -10% missile     -25% bomb
+	delay      -10% bullet   -15% missile     -25% bomb
+  	health     +20 health
+
+Menu:
+##	5323            the games name
+#	start           Begins the games selection
+#	tutorial        explains briefly the games premise
+#	account         brings up sign up/in
+	sign up         allows account creation
+	sign in         allows account log in
+#	leaderboard     shows users who have the biggest high score
+	customise       allows a user to change their name/password
+	credits         says who worked on every part
+
+Settings:
+##	Hz              
+--	graphics        high and low
+##	sound           effects can be toggled on and off
+##	music           can be toggled on and off
+#	difficulty      easy, normal, hard and impossible
+	easy            1.5x multiplier for players
+	normal          1x   multiplier
+	hard            1.5x multiplier for enemies
+	impossible      5x   multiplier for enemies
+	
+Pause:
+	restart         goes to the start of the level
+	menu            goes to the menu
+	settings        goes to the settings
+	
+Game:
+	dead            player dies
+	well done       player beats boss
+	congratulations player beats impossible boss
+	next level      goes to the next level
+	next difficulty goes to the next difficulty
+	give up         goes to the menu
+	try again       restarts the level
+	health bar      shows how much health each character has
+
+Enemy waves:
+	level 1        [1, 11, 2, 12, 112, 22, 122, 1122, 222]
+	level 2        [3, 33, 4, 34, 334, 44, 344, 3344, 444]
+	level 3        [5, 55, 6, 56, 556, 66, 566, 5566, 666]
+	level 4        [7, 77, 8, 78, 778, 88, 788, 7788, 888]
+	level 5        [9]
+
+Start
+	menu
+	player class selection
+	bring in player
+	spawn enemies
+	spawn health bars
+
+Player dies:
+	if player dies:
+		death screen
+		give up appear
+		if player has 1 or more lives left:
+			respawn appear
+			if respawn:
+				player comes back
+			if give up:
+				save lives remaining
+				end game
+				main menu
+
+		if player has 0 lives left:
+			try again appear
+			if try gain:
+				restart
+			if give up:
+				end game
+				main menu
+
+Boss dies:
+	if boss dies:
+		boss death skin
+		spawn coin with 1000 value
+		boss disappear
+		coin moves down
+		if coin touches the player:
+			add coin value to the players score
+			coin disappears
+		if coin reaches the bottom:
+			coin disappears	
+		
+
+		if difficulty is impossible:
+			congratulations appears
+			roll credits
+			menu button appears
+
+		else:
+			unlock next difficulty
+			well done appears
+			next difficulty appears 
+			give up appears
+		if next difficulty:
+			go up difficulty level
+			restart
+
+		if give up:
+			end game
+			main menu
+
+Enemy dies:
+	if enemy dies:
+		enemy death skin
+		spawn coin with enemy value
+		enemy disappear
+		coin moves down
+		if coin touches the player:
+			add coin value to the players score
+			coin disappears
+		if coin reaches the bottom:
+			coin disappears
+
+Enemies all die:
+	if all enemies die :
+		wait until all coins disappear
+		if wave <8:
+			ask player to choose an upgrade
+			start next wave
+
+		unlock next level
+		next level appear
+		give up appear
+		if next level:
+			save stats as default for next level
+			ask player to choose a level up
+			start next level
+
+		if give up:
+			end game
+			main menu
