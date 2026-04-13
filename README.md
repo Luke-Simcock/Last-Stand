@@ -1,8 +1,8 @@
 # Last-Stand
 
 This contains the .py, sprites and other critical files.
-Also contains older versions in Alpha
-Currently on Beta 1.0
+Also contains older versions in Alpha and Beta
+Currently on Gamma 1.0
 
 Game Overview:
 Story Background:
@@ -21,18 +21,16 @@ Your mission is to break through this initial assault and turn the tide in human
 
 Core Gameplay Mechanics
 The Alien Spearhead System
-┌───────────────────────┐
-│    SPEARHEAD WAVES    │
-│      (Waves 1-6)      │
-└───────────────────────┘
+SPEARHEAD WAVES
+(Waves 1-6) 
+
 DEFENSE LINE
 Each battle begins with an enemy, each stronger than the last, designed to break your defences:
 
 Turn 1-2: Basic assults designed to crush basic civilian resistance         (Paralyse gurylla defence)
 Turn 3-4: Troops to defeat military opposision                              (Deal massive millitary damage)
 Turn 5-6: Advanced troops to defeat stronger military opposision            (Deal massive millitary damage)
-Turn 7-8: Strongest troops to defeat entire armies single handedly.         (Final dedicated attacking force)
-Turn 9:   Head of the invading force able to erase civilisations from time. (Ultimate showing of power)
+Turn 7:   Head of the invading force able to erase civilisations from time. (Ultimate showing of power)
 
 
 Key Game Phases:
@@ -47,25 +45,16 @@ Full-scale Battle
 Spearhead waves begin
 Massive losses for the Empire
 Opportunity to turn the invasion back
-┌────────────────────────┐
-| You begin playing here |
-└────────────────────────┘
 
 Dependencies:
   Python 3.13.2
   Pygame 2.6.1
   All files inside the folder named "5323"
   
-┌──────────────────────────────────────────────────────────┐
-│                 DEVELOPMENT ENVIRONMENTS                 │
-├──────────────────────────────────────────────────────────┤
-│┌──────────────────┬──────────────────┬──────────────────┐│
-││    Editor/IDE    │  Version Control │     Planning     │|
-│├──────────────────┼──────────────────┼──────────────────┤│
-││ - VS Code        │ - Git            │ - Notepad        │|
-│└──────────────────┴──────────────────┴──────────────────┘│
-└──────────────────────────────────────────────────────────┘
-
+DEVELOPMENT ENVIRONMENTS:
+Editor/IDE      VS Code
+Version Control Git
+Planning        Notepad
 
 Game Code & Assets:
   All code, assets, sprites and images were created by me.
