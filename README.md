@@ -49,6 +49,8 @@ Opportunity to turn the invasion back
 Dependencies:
   Python 3.13.2
   Pygame 2.6.1
+  Xrandir 1.5.3
+  
   All files inside the folder named "5323"
   
 DEVELOPMENT ENVIRONMENTS:
