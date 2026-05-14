@@ -50,6 +50,7 @@ Dependencies:
   Python 3.13.2
   Pygame 2.6.1
   Xrandir 1.5.3
+  fastapi 0.136.1
   
   All files inside the folder named "5323"
   
