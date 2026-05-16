@@ -48,7 +48,6 @@ Opportunity to turn the invasion back
 
 Dependencies:
   Python                    3.13.2
-  
   altgraph                  0.17.5
   annotated-doc             0.0.4
   annotated-types           0.7.0
